@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wells-fargo-red: #D71E28;
+  --wells-fargo-dark-red: #b91922;
+}
+
+body {
+  @apply bg-gray-100;
+}
+
+/* Custom scrollbar for action buttons */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+/* Dropdown menu animations */
+.group:hover .group-hover\:block {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
